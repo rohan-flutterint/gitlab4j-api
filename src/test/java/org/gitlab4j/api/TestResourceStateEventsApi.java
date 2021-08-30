@@ -3,17 +3,20 @@ package org.gitlab4j.api;
 import org.gitlab4j.api.models.Issue;
 import org.gitlab4j.api.models.IssueEvent;
 import org.gitlab4j.api.models.Project;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.List;
 
 import static org.gitlab4j.api.TestIssuesApi.deleteAllTestIssues;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@Category(IntegrationTest.class)
+@Tag("integration")
+@ExtendWith(SetupIntegrationTestExtension.class)
 public class TestResourceStateEventsApi extends AbstractIntegrationTest {
 
     private static GitLabApi gitLabApi;
@@ -26,13 +29,13 @@ public class TestResourceStateEventsApi extends AbstractIntegrationTest {
         super();
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setup() {
         gitLabApi = baseTestSetup();
         testProject = getTestProject();
     }
 
-    @AfterClass
+    @AfterAll
     public static void teardown() {
         deleteAllTestIssues();
     }

@@ -1,12 +1,9 @@
 package org.gitlab4j.api;
 
-import org.gitlab4j.api.models.IssueEvent;
-import org.gitlab4j.api.models.LabelEvent;
-
-import javax.ws.rs.core.Response;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Stream;
+
+import org.gitlab4j.api.models.IssueEvent;
 
 
 /**
