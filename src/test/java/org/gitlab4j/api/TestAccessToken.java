@@ -23,6 +23,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
  *
  */
 @Tag("integration")
+@ExtendWith(GitLabInvocationContextProvider.class)
 @ExtendWith(SetupIntegrationTestExtension.class)
 public class TestAccessToken extends AbstractIntegrationTest {
 

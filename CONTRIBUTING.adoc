@@ -1,0 +1,12 @@
+= Contributing
+
+You want to contribute to GitLab4J-API and don't know how to do it?
+We hope this page will help you to contribute to this project.
+
+=== Create a new issue
+
+=== Contribute code
+
+==== Write and run tests
+
+Since version 4.20.0, we use junit 5 and testcontainer for 

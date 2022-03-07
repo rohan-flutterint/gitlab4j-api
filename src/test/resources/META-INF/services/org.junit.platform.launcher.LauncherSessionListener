@@ -1,0 +1,2 @@
+# Listener to start and stop GitLab containers for test purpose
+org.gitlab4j.api.GitLabContainersSetupTeardownListener
